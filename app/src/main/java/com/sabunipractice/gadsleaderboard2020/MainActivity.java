@@ -54,11 +54,10 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                List<SkillIQLeader> leaders = response.body();
-
                 List<SkillIQLeader> learners;
-                if (leaders != null) {
-                    learners = new ArrayList<>(leaders);
+
+                if (response.body() != null) {
+                    learners = new ArrayList<>(response.body());
                     Collections.sort(learners);
 
                     for(SkillIQLeader leader : learners){
