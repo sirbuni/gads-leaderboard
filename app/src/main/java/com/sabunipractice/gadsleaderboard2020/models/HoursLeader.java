@@ -1,6 +1,6 @@
 package com.sabunipractice.gadsleaderboard2020.models;
 
-public class HoursLeader {
+public class HoursLeader implements Comparable<HoursLeader> {
     private String name;
     private int hours;
     private String country;
@@ -20,5 +20,10 @@ public class HoursLeader {
 
     public String getBadgeUrl() {
         return badgeUrl;
+    }
+
+    @Override
+    public int compareTo(HoursLeader o) {
+        return o.getHours() - this.hours;
     }
 }
