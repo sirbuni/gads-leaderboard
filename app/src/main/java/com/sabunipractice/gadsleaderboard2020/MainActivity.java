@@ -1,16 +1,41 @@
 package com.sabunipractice.gadsleaderboard2020;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private static final String BASE_URL = "https://gadsapi.herokuapp.com/";
     private TextView mTextView;
     private GAADLearnersAPI mGAADLearnersAPI;
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem actionView = menu.findItem(R.id.menu_action_submit);
+        View v = actionView.getActionView();
+
+        Button submit = v.findViewById(R.id.btn_submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SubmissionFormActivity.class);
+                startActivity(intent);
+            }
+        });
+        return super.onPrepareOptionsMenu(menu);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        TODO: Customize Toolbar to add a submission button
+//        TODO: Create submission form (with logo at the top)
+//        TODO: Create custom dialogs for form submission feedback
+
 //        TODO: Research on how to post to Google Forms (for project submission)
         configureTabLayout();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 
     private void configureTabLayout() {
