@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
@@ -15,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        android:contentDescription="@string/ic_back" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -30,7 +30,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnBack"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/frorm_header" />
+        app:srcCompat="@drawable/frorm_header"
+        android:contentDescription="@string/img_brand_logo" />
 
 
 
@@ -41,7 +42,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:text="Project Submission"
+        android:text="@string/form_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/orange"
         android:theme="@style/AppTheme.AppBarOverlay"
@@ -59,7 +60,8 @@
         android:background="@drawable/underline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="@string/form_title_separator" />
 
     <EditText
         android:id="@+id/etFirstName"
@@ -69,7 +71,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="4dp"
         android:background="@android:color/white"
-        android:hint="First Name"
+        android:hint="@string/hint_first_name"
         android:inputType="textPersonName|textCapWords"
         android:padding="8dp"
         app:layout_constraintEnd_toStartOf="@+id/etLastName"
@@ -77,7 +79,8 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etLastName"
@@ -86,7 +89,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/white"
-        android:hint="Last Name"
+        android:hint="@string/hint_last_name"
         android:inputType="textPersonName|textCapWords"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/etFirstName"
@@ -95,7 +98,8 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/etFirstName"
-        app:layout_constraintTop_toTopOf="@+id/etFirstName" />
+        app:layout_constraintTop_toTopOf="@+id/etFirstName"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etEmailAddress"
@@ -106,12 +110,13 @@
         android:layout_marginEnd="16dp"
         android:background="@android:color/white"
         android:ems="10"
-        android:hint="Email Address"
+        android:hint="@string/hint_email_address"
         android:inputType="textWebEmailAddress|textEmailAddress"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etGithubLink"
@@ -122,12 +127,13 @@
         android:layout_marginEnd="16dp"
         android:background="@android:color/white"
         android:ems="10"
-        android:hint="Project on GITHUB (link)"
-        android:inputType="textUri|textWebEmailAddress"
+        android:hint="@string/hint_project_on_github_link"
+        android:inputType="textUri"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailAddress"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnSubmit"
@@ -138,7 +144,7 @@
         android:backgroundTint="@color/orange"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
-        android:text="Submit"
+        android:text="@string/btn_text_submit"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"

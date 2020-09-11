@@ -4,12 +4,26 @@
     <string name="response_code">\"Code: \"</string>
     <string name="no_records">No records found!</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_title_learning_leaders">Learning Leaders</string>
     <string name="tab_title_skill_iq_leaders">Skill IQ Leaders</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
     <string name="no_record_found">No records found!</string>
+    <string name="success_dialog">SuccessDialog</string>
+    <string name="failed_dialog">FailedDialog</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_project_on_github_link">Project on GITHUB (link)</string>
+    <string name="btn_text_submit">Submit</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="form_title">Project Submission</string>
+    <string name="ic_back">Back Icon</string>
+    <string name="img_brand_logo">Brand Logo</string>
+    <string name="form_title_separator">Form separator</string>
+    <string name="submitting_form">Submitting form...</string>
+    <string name="form_all_fields_required">All fields are required</string>
+    <string name="form_valid_email_required">A valid email address is required</string>
+    <string name="form_valid_url_required">A valid url is required</string>
+    <string name="text_confirm_btn">Yes</string>
+    <string name="text_confirm_dialog">Are you sure?</string>
+    <string name="close_dialog">Close Dialog Button</string>
 </resources>
