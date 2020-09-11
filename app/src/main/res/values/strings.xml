@@ -26,4 +26,5 @@
     <string name="text_confirm_btn">Yes</string>
     <string name="text_confirm_dialog">Are you sure?</string>
     <string name="close_dialog">Close Dialog Button</string>
+    <string name="menu_item_submit">submit</string>
 </resources>
