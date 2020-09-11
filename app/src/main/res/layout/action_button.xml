@@ -7,6 +7,8 @@
         android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/rounded_corners"
         android:text="Submit"
         android:textAllCaps="false"

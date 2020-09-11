@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ import androidx.fragment.app.DialogFragment;
 public class ConfirmDialogFragment extends DialogFragment {
     private Button btnConfirm;
     private ImageButton btnClose;
+    private TextView mTextView;
     private FeedbackDialogListener mListener;
 
     public ConfirmDialogFragment(){
@@ -32,12 +34,14 @@ public class ConfirmDialogFragment extends DialogFragment {
         View view = inflater.inflate(R.layout.fragment_confirm_dialog, null);
         btnConfirm = view.findViewById(R.id.btnConfirmSubmission);
         btnClose = view.findViewById(R.id.btnCloseDialog);
+        mTextView = view.findViewById(R.id.confirm_dialog_title);
 
         builder.setView(view);
 
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mTextView.setVisibility(View.GONE);
                 btnConfirm.setClickable(false);
                 btnConfirm.setText(R.string.submitting_form);
                 mListener.submitConfirmed(true);
