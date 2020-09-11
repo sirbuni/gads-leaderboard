@@ -6,8 +6,8 @@
     <item
         android:id="@+id/menu_action_submit"
         android:icon="@android:drawable/ic_menu_share"
+
         android:title="Share"
         app:actionLayout="@layout/action_button"
-
         app:showAsAction="ifRoom" />
 </menu>
